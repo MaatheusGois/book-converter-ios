@@ -28,7 +28,7 @@ struct VisionManager {
     }
 
     static func recognizeTextRequest(completion: @escaping (String?) -> Void) -> VNRecognizeTextRequest {
-        VNRecognizeTextRequest { (request, error) in
+        VNRecognizeTextRequest { (request, _) in
             guard let observations = request.results as? [VNRecognizedTextObservation] else {
                 completion(nil)
                 return
@@ -39,7 +39,7 @@ struct VisionManager {
                 let isTitle = observation.boundingBox.height > 0.06
                 let isBrokeLine = observation.boundingBox.width < 0.9
 
-                var result = topCandidate.string
+                var result = topCandidate.string.trimmingCharacters(in: .whitespaces)
                 if isTitle { result = "\n\n\n" + result + "\n\n\n" }
                 if isBrokeLine { result += topCandidate.string.last == "." ? "\n\n" : "" }
 
@@ -49,7 +49,7 @@ struct VisionManager {
             DispatchQueue.main.async {
                 completion(
                     recognizedStrings.reduce("", { partialResult, next in
-                        let separator = " "
+                        let separator = partialResult.last == "\n" ? "" : " "
 
                         return partialResult + separator + next
                     })
@@ -64,4 +64,3 @@ extension Character {
         self == self.uppercased().first
     }
 }
-
