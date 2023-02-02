@@ -40,6 +40,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		826E51D5298B4E30001C8D11 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8270F63B298A3BD900C0577F /* PDFManager.swift */,
+				8270F63D298A3BE700C0577F /* VisionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		826E51D6298B4E3A001C8D11 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8270F641298A3DFD00C0577F /* clean-code.pdf */,
+				8270F63F298A3C2B00C0577F /* sample.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8270F621298A3BC200C0577F = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +79,8 @@
 			children = (
 				8270F62D298A3BC200C0577F /* book_convertApp.swift */,
 				8270F62F298A3BC200C0577F /* ContentView.swift */,
-				8270F641298A3DFD00C0577F /* clean-code.pdf */,
-				8270F63F298A3C2B00C0577F /* sample.pdf */,
-				8270F63B298A3BD900C0577F /* PDFManager.swift */,
-				8270F63D298A3BE700C0577F /* VisionManager.swift */,
+				826E51D6298B4E3A001C8D11 /* Resources */,
+				826E51D5298B4E30001C8D11 /* Managers */,
 				8270F631298A3BC600C0577F /* Assets.xcassets */,
 				8270F633298A3BC600C0577F /* Preview Content */,
 			);
