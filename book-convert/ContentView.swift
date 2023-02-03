@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    private let startPage = 10
-    private let endPage = 25
+    private let startPage = 26
+    private let endPage = 39
 
     @State var text = ""
 
