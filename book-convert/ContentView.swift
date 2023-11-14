@@ -9,23 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
 
-    private let startPage = 40
-    private let endPage = 59
+    private let startPage = 98
+    private let endPage = 106
+    @State private var currentPage: Float = 0
+    @State private var progressTitle: String = "Processing..."
 
     @State var text = ""
 
     var body: some View {
         NavigationView {
             ScrollView {
-                Text(text).padding(28)
+                TextEditor(text: $text).padding(28)
             }.onAppear {
                 self.load(page: startPage)
             }.onTapGesture {
                 UIPasteboard.general.string = self.text
             }
             .toolbar {
-                Button("Copy") {
-                    UIPasteboard.general.string = self.text
+                HStack {
+                    ProgressView(
+                        progressTitle,
+                        value: currentPage,
+                        total: .init(endPage - startPage)
+                    )
+                    Button("Copy") {
+                        UIPasteboard.general.string = self.text
+                    }
                 }
             }
         }
@@ -41,6 +50,8 @@ struct ContentView: View {
 
             if page < endPage { load(page: page + 1) }
             print("✅✅✅ PAGE DONE: \(page) ✅✅✅")
+            currentPage = Float(page - startPage)
+            progressTitle = "Processing \(Int(currentPage)) of \(endPage - startPage)"
         }
     }
 }
