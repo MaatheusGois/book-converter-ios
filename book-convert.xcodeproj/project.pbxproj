@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1A70F42B04580A00DA4170 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A70F32B04580A00DA4170 /* File.swift */; };
 		8270F62E298A3BC200C0577F /* book_convertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270F62D298A3BC200C0577F /* book_convertApp.swift */; };
 		8270F630298A3BC200C0577F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270F62F298A3BC200C0577F /* ContentView.swift */; };
 		8270F632298A3BC600C0577F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270F631298A3BC600C0577F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1A70F32B04580A00DA4170 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8270F62A298A3BC200C0577F /* book-convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270F62D298A3BC200C0577F /* book_convertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book_convertApp.swift; sourceTree = "<group>"; };
 		8270F62F298A3BC200C0577F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				8270F62D298A3BC200C0577F /* book_convertApp.swift */,
 				8270F62F298A3BC200C0577F /* ContentView.swift */,
+				2E1A70F32B04580A00DA4170 /* File.swift */,
 				826E51D6298B4E3A001C8D11 /* Resources */,
 				826E51D5298B4E30001C8D11 /* Managers */,
 				8270F631298A3BC600C0577F /* Assets.xcassets */,
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1A70F42B04580A00DA4170 /* File.swift in Sources */,
 				8270F630298A3BC200C0577F /* ContentView.swift in Sources */,
 				8270F63E298A3BE700C0577F /* VisionManager.swift in Sources */,
 				8270F63C298A3BD900C0577F /* PDFManager.swift in Sources */,
